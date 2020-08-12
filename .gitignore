@@ -46,5 +46,4 @@ testem.log
 Thumbs.db
 
 #environment files
-environment.json
-environment.prod.json
+environment.prod.ts
