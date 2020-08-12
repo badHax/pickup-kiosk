@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('parcelport-kiosk app is running!');
+    expect(page.getTitleText()).toEqual('smartpost-kiosk app is running!');
   });
 
   afterEach(async () => {

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "parcelport-kiosk": {
+    "smartpost-kiosk": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/parcelport-kiosk",
+            "outputPath": "dist/smartpost-kiosk",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,19 +68,19 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "parcelport-kiosk:build",
+            "browserTarget": "smartpost-kiosk:build",
             "proxyConfig": "proxy.conf.json"
           },
           "configurations": {
             "production": {
-              "browserTarget": "parcelport-kiosk:build:production"
+              "browserTarget": "smartpost-kiosk:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "parcelport-kiosk:build"
+            "browserTarget": "smartpost-kiosk:build"
           }
         },
         "test": {
@@ -117,15 +117,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "parcelport-kiosk:serve"
+            "devServerTarget": "smartpost-kiosk:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "parcelport-kiosk:serve:production"
+              "devServerTarget": "smartpost-kiosk:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "parcelport-kiosk"
+  "defaultProject": "smartpost-kiosk"
 }

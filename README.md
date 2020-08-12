@@ -1,6 +1,6 @@
 # smartpost-kiosk
 
-Kiosk UI for package(mail) management system. Kiosk is integrated with a locker (serial board) that controls the locks on the mailbox slots.
+Kiosk UI for package(mail) management system. Kiosk is integrated with a locker (serial board) that controls the locks on the mailbox slots. based off flows from [parcelport](https://github.com/webosmotic-developer/parcelport-locker-webflow).
 
 ## Who will use
 * customers - for dropoff
