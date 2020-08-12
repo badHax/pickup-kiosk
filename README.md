@@ -5,7 +5,7 @@ Kiosk UI for package(mail) management system. Kiosk is integrated with a locker 
 ## Who will use
 * customers - for dropoff
 * customers - for pickup
-* curiers   - for dropoff
+* couriers   - for dropoff
 
 ## Getting Started
 
