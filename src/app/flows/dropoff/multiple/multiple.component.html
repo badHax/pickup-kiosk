@@ -1,0 +1,46 @@
+
+<form id="email-form" name="email-form" data-name="Email Form">
+  <div class="row w-row">
+    <div class="column w-col w-col-6">
+      <h1 class="message">
+        Please scan or enter the label on next parcel or click FINISH
+      </h1>
+      <input
+        (focus)="hideInvalidError()"
+        (focus)="toggleKeyboard = true"
+        (input)="handleKeyUp($event)"
+        class="input"
+        value="{{ value.toLocaleUpperCase() }}"
+        [disabled]="isDisabled"
+        pattern="^[a-zA-Z0-9]{10}$"
+        (keyup)="handleKeyUp($event)"
+        type="text"
+        maxlength="10"
+        class="input w-input"
+        name="field"
+        data-name="Field"
+        placeholder="Scan or enter your dropoff code"
+        id="field"
+        required=""
+      />
+      <p [class]="fieldError">
+        <span class="material-icons">warning</span><br />Your code is not
+        recognized, please try again <br />or call 1-800-654-4556
+      </p>
+      <app-logo></app-logo>
+      <a routerLink="../single" class="button back-btn w-button"
+        ><span class="material-icons">arrow_back </span>BACK</a
+      >
+    </div>
+    <div class="column-2 w-col w-col-6">
+      <a  [routerLink]="['../../dialogs']"
+      [queryParams]="{ type: 'FINISHED' }" class="button w-button"
+        ><span class="material-icons">done</span><br />FINISH</a
+      >
+    </div>
+  </div>
+</form>
+<app-keyboard
+  *ngIf="toggleKeyboard"
+  (messageEvent)="receiveMessage($event)"
+></app-keyboard>

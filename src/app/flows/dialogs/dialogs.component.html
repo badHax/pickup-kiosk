@@ -1,0 +1,86 @@
+<div *ngIf="type === 'ERROR'">
+  <div class="w-form">
+    <form id="email-form" name="email-form" data-name="Email Form">
+      <div class="row w-row">
+        <div class="column w-col w-col-6">
+          <h1 class="message">
+            We are experiencing technical difficulties.<br /><br />Please call
+            support at<br />1-800-222-22-22
+          </h1>
+          <a routerLink="../"
+            ><img
+              src="../../assets/images/59c280ad22595c0001088e5a_L1.png"
+              srcset="
+                ../../assets/images/59c280ad22595c0001088e5a_L1-p-500.png   500w,
+                ../../assets/images/59c280ad22595c0001088e5a_L1-p-800.png   800w,
+                ../../assets/images/59c280ad22595c0001088e5a_L1-p-1080.png 1080w,
+                ../../assets/images/59c280ad22595c0001088e5a_L1.png        1370w
+              "
+              sizes="150px"
+              class="logo"
+          /></a>
+
+          <a routerLink="" class="button back-btn w-button"
+            ><span class="material-icons">home</span>HOME</a
+          >
+        </div>
+        <div class="column-2 w-col w-col-6">
+          <img src="../../assets/images/warning-1.png" class="image" />
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div *ngIf="type === 'FINISHED'">
+  <div class="w-form">
+    <form id="email-form" name="email-form" data-name="Email Form">
+      <div class="row w-row">
+        <div class="column w-col w-col-6">
+          <h1 class="message">
+            All done!<br />Thank you for using Smart Post<br /><br />Have a
+            great day!
+          </h1>
+          <app-logo></app-logo>
+        </div>
+        <div class="column-2 w-col w-col-6">
+          <img
+            src="../../assets/images/smiling-emoticon-square-face.png"
+            class="image"
+          />
+        </div>
+        <a routerLink="" class="button back-btn w-button"
+          ><span class="material-icons">home</span>HOME</a
+        >
+      </div>
+    </form>
+    <div class="w-form-done">
+      <div>Thank you! Your submission has been received!</div>
+    </div>
+    <div class="w-form-fail">
+      <div>Oops! Something went wrong while submitting the form.</div>
+    </div>
+  </div>
+</div>
+<div *ngIf="type == 'NO-SLOT'">
+  <form id="email-form" name="email-form" data-name="Email Form">
+    <div class="row w-row">
+      <div class="column w-col w-col-6">
+        <h1 class="message">
+          We are sorry but there are no larger slots available.<br /><br />What
+          you like to do?
+        </h1>
+        <app-logo></app-logo>
+      </div>
+      <div class="column-2 w-col w-col-6">
+        <a routerLink="~/dialog" [queryParams]="{type:'FINISHED'}" class="button w-button"
+          ><span class="material-icons">done</span><br />FINISH</a
+        ><a routerLink="~/dropoff/single" class="button w-button"
+          ><span class="material-icons">skip_next</span><br />TRY ANOTHER
+          PACKAGE</a
+        ><a routerLink="" class="button cancel w-button"
+          ><span class="material-icons">cancel</span><br />CANCEL ALL</a
+        >
+      </div>
+    </div>
+  </form>
+</div>

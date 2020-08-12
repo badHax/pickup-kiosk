@@ -1,0 +1,40 @@
+<form id="email-form" name="email-form" data-name="Email Form">
+  <div class="row w-row">
+    <div class="column w-col w-col-6">
+      <h1 class="message">Please scan or enter the label on first parcel</h1>
+      <input
+        (focus)="hideInvalidError()"
+        (focus)="toggleKeyboard = true"
+        (input)="handleKeyUp($event)"
+        class="input"
+        value="{{ value.toLocaleUpperCase() }}"
+        [disabled]="isDisabled"
+        pattern="^[a-zA-Z0-9]{10}$"
+        (keyup)="handleKeyUp($event)"
+        type="text"
+        maxlength="10"
+        class="input w-input"
+        name="field"
+        data-name="Field"
+        placeholder="Scan or enter your dropoff code"
+        id="field"
+        required=""
+      />
+      <p [class]="fieldError">
+        <span class="material-icons">warning</span><br />Your code is not
+        recognized, please try again <br />or call 1-800-654-4556
+      </p>
+      <app-logo></app-logo>
+    </div>
+    <div class="column-2 w-col w-col-6">
+      <img
+        src="../../../../assets/images/box_scan_animation.gif"
+        class="centered"
+      />
+    </div>
+  </div>
+</form>
+<app-keyboard
+  *ngIf="toggleKeyboard"
+  (messageEvent)="receiveMessage($event)"
+></app-keyboard>

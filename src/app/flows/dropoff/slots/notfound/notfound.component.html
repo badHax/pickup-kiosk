@@ -1,0 +1,24 @@
+<form id="email-form" name="email-form" data-name="Email Form">
+  <div class="row w-row">
+    <div class="column w-col w-col-6">
+      <h1 class="message">
+        We are sorry but there are no larger slots available.<br /><br />What
+        you like to do?
+      </h1>
+      <app-logo></app-logo>
+    </div>
+    <div class="column-2 top-adj w-col w-col-6">
+      <a
+        routerLink="../../../dialogs"
+        [queryParams]="{ type: 'FINISHED' }"
+        class="button w-button"
+        ><span class="material-icons">done</span><br />FINISH</a
+      ><a routerLink="../../multiple" class="button w-button"
+        ><span class="material-icons">skip_next</span><br />TRY ANOTHER
+        PACKAGE</a
+      ><a routerLink="" class="button cancel w-button"
+        ><span class="material-icons">cancel</span><br />CANCEL ALL</a
+      >
+    </div>
+  </div>
+</form>

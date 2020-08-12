@@ -1,0 +1,69 @@
+<form id="email-form" name="email-form" data-name="Email Form">
+  <div class="row w-row">
+    <div class="column w-col w-col-6">
+      <input
+        (focus)="hideInvalidError()"
+        (focus)="toggleKeyboard = true"
+        (input)="handleKeyUp($event)"
+        class="input"
+        value="{{ value.toLocaleUpperCase() }}"
+        [disabled]="isDisabled"
+        pattern="^[a-zA-Z0-9]{10}$"
+        (keyup)="handleKeyUp($event)"
+        type="text"
+        maxlength="10"
+        class="input w-input"
+        name="field"
+        data-name="Field"
+        placeholder="Scan or enter your pickup code"
+        id="field"
+        required=""
+      />
+      <p [class]="fieldError">
+        <span class="material-icons">warning</span><br />Your code is not
+        recognized, please try again <br />or call 1-800-654-4556
+      </p>
+      <app-logo></app-logo>
+    </div>
+    <div class="column-2 w-col w-col-6">
+      <div
+        data-delay="4000"
+        data-animation="slide"
+        class="slider w-slider"
+        data-autoplay="1"
+        data-easing="ease-in-out-expo"
+        data-hide-arrows="1"
+        data-duration="800"
+        data-infinite="1"
+      >
+        <div class="w-slider-mask">
+          <div class="w-slide">
+            <img
+              src="../../../assets/images/phone-scan-animation.gif"
+              class="start-img"
+            />
+          </div>
+          <div class="w-slide">
+            <img
+              src="../../../assets/images/box_scan_animation.gif"
+              class="start-img"
+            />
+          </div>
+          <div class="w-slide">
+            <img
+              src="../../../assets/images/keypad-entry-animation.gif"
+              class="start-img"
+            />
+          </div>
+        </div>
+        <div class="w-slider-arrow-left"></div>
+        <div class="w-slider-arrow-right"></div>
+        <div class="slide-nav w-slider-nav"></div>
+      </div>
+    </div>
+  </div>
+</form>
+<app-keyboard
+  *ngIf="toggleKeyboard"
+  (messageEvent)="receiveMessage($event)"
+></app-keyboard>

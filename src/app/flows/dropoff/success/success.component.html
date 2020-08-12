@@ -1,0 +1,23 @@
+<form id="email-form" name="email-form" data-name="Email Form">
+  <div class="row w-row">
+    <div class="column w-col w-col-6">
+      <h1 class="message">Thank you!<br />Your deposit was accepted.</h1>
+      <app-logo></app-logo
+      ><a [routerLink]="'../'" class="button back-btn w-button"
+        ><span class="material-icons">arrow_back </span>BACK</a
+      >
+    </div>
+    <div class="column-2 w-col w-col-6">
+      <a [routerLink]="'../multiple'" class="button w-button"
+        ><span class="material-icons">more_horiz</span><br />DROPOFF MORE</a
+      >
+      <a
+        [routerLink]="['../../dialogs']"
+        [queryParams]="{ type: 'FINISHED' }"
+        class="button w-button"
+        ><span class="icon"></span><span class="material-icons">done</span
+        ><br />FINISH</a
+      >
+    </div>
+  </div>
+</form>

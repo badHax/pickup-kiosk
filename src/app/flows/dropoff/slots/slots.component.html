@@ -1,0 +1,18 @@
+  <div class="w-form">
+    <form id="email-form" name="email-form" data-name="Email Form">
+      <div class="row w-row">
+        <div class="column w-col w-col-6">
+          <h1 class="message">Please select a different slot size.</h1>
+          <app-logo></app-logo
+          ><a routerLink="" class="button back-btn w-button"
+            ><span class="material-icons">arrow_back</span>BACK</a
+          >
+        </div>
+        <div class="column-2  w-col w-col-6">
+          <a  *ngIf="medium" href="#" (click) = "pickLocker('MEDIUM')" class="button block w-button">MEDIUM</a
+          ><a *ngIf="large" href="#" (click) = "pickLocker('LARGE')" class="button block w-button">LARGE</a
+          ><a *ngIf="small" href="#" (click) = "pickLocker('SMALL')"  class="button block w-button">SMALL</a>
+        </div>
+      </div>
+    </form>
+  </div>
