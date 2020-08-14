@@ -1,6 +1,6 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
-import { ApiService } from 'src/services/api.service';
+import { ApiService } from '../../../_services/api.service';
 
 @Component({
   selector: 'app-slots',

@@ -2,10 +2,9 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import { Subject } from 'rxjs';
 import { Router } from '@angular/router';
 import { environment } from '../../../../environments/environment';
-import { ApiService } from 'src/services/api.service';
-import { Slot } from '../../../models/slot.model';
-import { Package } from '../../../models/package.model';
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
+import { ApiService } from '../../../_services/api.service';
+import { Slot } from '../../../_models/slot.model';
+import { Package } from '../../../_models/package.model';
 
 @Component({
   selector: 'app-dropoff-single',

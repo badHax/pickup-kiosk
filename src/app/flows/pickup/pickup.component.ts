@@ -2,9 +2,9 @@ import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
-import { environment } from 'src/environments/environment';
+import { environment } from '../../../environments/environment';
 import { KeyboardComponent } from 'src/app/keyboard/keyboard.component';
-import { ApiService } from 'src/services/api.service';
+import { ApiService } from '../../_services/api.service';
 import { Router } from '@angular/router';
 import { NgxUiLoaderService } from 'ngx-ui-loader';
 

@@ -21,6 +21,12 @@
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
+            "allowedCommonJsDependencies": [
+              "bindings",
+              "util",
+              "file-uri-to-path",
+              "usb"
+            ],
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": [

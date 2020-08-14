@@ -1,8 +1,8 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { Subject } from 'rxjs';
-import { Slot } from 'src/app/models/slot.model';
+import { Slot } from '../../../_models/slot.model';
 import { Router } from '@angular/router';
-import { ApiService } from 'src/services/api.service';
+import { ApiService } from '../../../_services/api.service';
 import { environment } from 'src/environments/environment';
 
 @Component({

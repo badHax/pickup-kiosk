@@ -19,11 +19,15 @@
     "@angular/platform-browser": "~10.0.0",
     "@angular/platform-browser-dynamic": "~10.0.0",
     "@angular/router": "~10.0.0",
+    "bindings": "^1.5.0",
+    "file-uri-to-path": "^2.0.0",
+    "ng-socket-io": "^0.2.4",
     "ngx-toastr": "^13.0.0",
     "ngx-ui-loader": "^9.1.1",
     "rxjs": "~6.5.5",
     "simple-keyboard": "^2.29.90",
     "tslib": "^2.0.0",
+    "usb": "^1.6.3",
     "zone.js": "~0.10.3"
   },
   "devDependencies": {

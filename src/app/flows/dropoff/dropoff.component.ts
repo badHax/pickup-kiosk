@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { NgxUiLoaderService } from 'ngx-ui-loader';
 import { KeyboardComponent } from '../../keyboard/keyboard.component';
-import { ApiService } from '../../../services/api.service';
+import { ApiService } from '../../_services/api.service';
 import { ClassField } from '@angular/compiler';
 
 @Component({
