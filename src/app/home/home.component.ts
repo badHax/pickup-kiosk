@@ -13,6 +13,6 @@ export class HomeComponent implements OnInit {
     //remove data from previous session
     localStorage.clear();
     console.log('These are the connected devices');
-    this._locker.getAllSlotStatus();
+    this._locker.getAllSlotDoorStatus();
   }
 }

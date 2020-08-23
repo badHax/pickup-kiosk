@@ -70,6 +70,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 Hat tip to
 * [simple-keyboard](https://github.com/hodgef/simple-keyboard) for really easy on-screen keyboard
-* [serialport](https://github.com/serialport/node-serialport) for usb commands
+* [parcelport](https://github.com/webosmotic-developer/parcelport-locker-webflow) for original html flows
 
 

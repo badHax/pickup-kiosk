@@ -1,0 +1,22 @@
+{
+  "option-pickup-user": "Bağlamanı götür - istifadəçi",
+  "option-dropoff-user": "Bağlamanı yerləşdir - istifadəçi",
+  "option-dropoff-courier": "Bağlamanı yerləşdir - kuryer",
+  "prompt-scan-code": "Kodunuzu daxil edil",
+  "dialog-code-not-recognized": "Kodunuz tanınmadı, yenidən cəhd edin və ya 012 511-12-91 nömrəsinə zəng edin",
+  "prompt-remove-from-slot": "Zəhmət olmasa bağlamanızı açıq yuvadan götürün. Davam etmək üçün qapını bağlayın.",
+  "dialog-more-pickup": "Sizin üçün daha bir bağlama var! Zəhmət olmasa açıq yuvadan götürün. Davam etmək üçün qapını  bağlayın.",
+  "prompt-close-door": "Davam etmək üçün qapını  bağlayın.",
+  "dialog-finish-message": "Hər şey hazırdır! Smart Post istifadə etdiyiniz üçün təşəkkür edirik! Gününüz uğurlu olsun!",
+  "option-timeout": "Bir problem var?",
+  "option-package-no-fit": "Bağlama yuvaya yerləşmir",
+  "option-cancel-dropoff": "Yerləşdirməni ləğv et",
+  "option-need-help": "Köməyə ehtiyacım var!",
+  "option-need-more-time": "Əlavə vaxta ehtiyacım var!",
+  "prompt-dropoff-cancelled": "Yerləşdirmə ləğv ediləcək Zəhmət olmasa saxlanılan bağlamaları açıq yuvalardan götürün",
+  "prompt-deposit": "Zəhmət olamasa açıq yuvaya bağlamanı yerləşdirin. Davam etmək üçün yuva qapısını bağlayın.",
+  "prompt-select-slot-size": "Yvanın ölçülərini seçin",
+  "option-small": "Kiçik",
+  "option-medium": "Orta",
+  "option-large": "Böyük"
+}

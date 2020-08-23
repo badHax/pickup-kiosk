@@ -1,28 +1,63 @@
 import { Injectable } from '@angular/core';
-import { Socket } from 'ng-socket-io';
+import {  webSocket, WebSocketSubject } from 'rxjs/webSocket';
+import { tap, catchError, switchAll } from 'rxjs/operators';
+import { EMPTY, Subject } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class LockerService {
-  constructor(private socket: Socket) {}
+  constructor(private socket: WebSocket) {}
+
+  private socket$: WebSocketSubject<any>;
+  private messagesSubject$ = new Subject();
+  public messages$ = this.messagesSubject$.pipe(switchAll(), catchError(e => { throw e }));
+
+  public connect(): void {
+
+    if (!this.socket$ || this.socket$.closed) {
+      this.socket$ = this.getNewWebSocket();
+      const messages = this.socket$.pipe(
+        tap({
+          error: error => console.log(error),
+        }), catchError(_ => EMPTY));
+      this.messagesSubject$.next(messages);
+    }
+  }
+
+  private getNewWebSocket() {
+    return webSocket(`http;//${environment.LOCKER_IP}:${environment.LOCKER_PORT}`);
+  }
+
+  /**
+   * sends data over tcp
+   * @param msg command to send
+   */
+  sendMessage(msg: any) {
+    this.socket$.next(msg);
+  }
+
+  /**
+   * close the web socket
+   */
+  close() {
+    this.socket$.complete();
+  }
+
   /**
    * Check all slot to see if they are empty or closed
    */
   getAllSlotOccupancyStatus() {
     const command = this.makeCommand('EMPTY-FULL');
-    this.socket.emit(command.join(''), (data) => {
-      console.log(data);
-    });
+    this.sendMessage(command);
   }
   /**
    * Gets all the door open/close status for locker/cabinet
    */
   getAllSlotDoorStatus() {
     const command = this.makeCommand('DOOR');
-    this.socket.emit(command.join(''), (data) => {
-      console.log(data);
-    });
+    this.sendMessage(command);
   }
   /**
    * Check if the slot is open or closed
@@ -30,9 +65,7 @@ export class LockerService {
    */
   getSlotOpenCloseStatus(slotAddr: string) {
     const command = this.makeCommand('DOOR', slotAddr);
-    this.socket.emit(command.join(''), (data) => {
-      console.log(data);
-    });
+    this.sendMessage(command);
   }
 
   /**
@@ -41,9 +74,7 @@ export class LockerService {
    */
   openSlot(slotAddr: string) {
     const command = this.makeCommand('OPEN', slotAddr);
-    this.socket.emit(command.join(''), (data) => {
-      console.log(data);
-    });
+    this.sendMessage(command);
   }
 
   /**

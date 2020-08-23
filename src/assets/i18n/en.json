@@ -1,0 +1,22 @@
+{
+  "option-pickup-user": "Pickup - User",
+  "option-dropoff-user": "Dropoff - User",
+  "option-dropoff-courier": "Dropoff - Courier",
+  "prompt-scan-code": "Scan or enter your code or label",
+  "dialog-code-not-recognized": "Your code is not recognized, please try again or call 012 511-12-91",
+  "prompt-remove-from-slot": "Please pick up your delivery from open slot. Close door to continue.",
+  "dialog-more-pickup": "There's more for you! Please pickup from open slot. Close slot to continue.",
+  "prompt-close-door": "Please close door to continue.",
+  "dialog-finish-message": "All done! Thank you for using Smart Post! Have a great day!",
+  "option-timeout": "Having some trouble?",
+  "option-package-no-fit": "Package doesn't fit",
+  "option-cancel-dropoff": "Cancel Dropoff",
+  "option-need-help": "I need help!",
+  "option-need-more-time": "I need more time!",
+  "prompt-dropoff-cancelled": "Your dropoff will be cancelled. Please pickup your deposited parcels from open slots.",
+  "prompt-deposit": "Please deposit in the open slot. Close the slot door to continue.",
+  "prompt-select-slot-size": "Select a slot size.",
+  "option-small": "Small",
+  "option-medium": "Medium",
+  "option-large": "Large"
+}
