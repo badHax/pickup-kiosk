@@ -24,7 +24,6 @@ import { LogoComponent } from './logo.component';
 import { SuccessComponent } from './flows/dropoff/success/success.component';
 import { NotfoundComponent } from './flows/dropoff/slots/notfound/notfound.component';
 import { SingleComponent as PickupSingleComponent } from './flows/pickup/single/single.component';
-import { environment } from 'src/environments/environment';
 import { NgxLanguageSelectorModule } from 'ngx-language-selector';
 
 @NgModule({
@@ -57,7 +56,6 @@ import { NgxLanguageSelectorModule } from 'ngx-language-selector';
     HttpClientModule,
     BrowserAnimationsModule,
     NgxLanguageSelectorModule,
-    //SocketIoModule.forRoot({ url: `http://${environment.LOCKER_IP}:${environment.LOCKER_PORT}`, options: {} }) ,
     NgxUiLoaderModule.forRoot({
       bgsColor: '#ffb812',
       bgsOpacity: 0.5,

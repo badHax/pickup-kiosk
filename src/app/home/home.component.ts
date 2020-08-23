@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     //remove data from previous session
     localStorage.clear();
-    console.log('These are the connected devices');
-    this._locker.getAllSlotDoorStatus();
+    // console.log('These are the connected devices');
+    // this._locker.getAllSlotDoorStatus();
   }
 }
