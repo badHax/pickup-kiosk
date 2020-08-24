@@ -1,15 +1,13 @@
 import { Injectable } from '@angular/core';
-import {  webSocket, WebSocketSubject } from 'rxjs/webSocket';
-import { tap, catchError, switchAll } from 'rxjs/operators';
+import { webSocket, WebSocketSubject } from 'rxjs/webSocket';
+import { environment } from '../../environments/environment';
+import { catchError, tap, switchAll } from 'rxjs/operators';
 import { EMPTY, Subject } from 'rxjs';
-import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class LockerService {
-  constructor(private socket: WebSocket) {}
-
   private socket$: WebSocketSubject<any>;
   private messagesSubject$ = new Subject();
   public messages$ = this.messagesSubject$.pipe(switchAll(), catchError(e => { throw e }));
